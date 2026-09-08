@@ -7,7 +7,7 @@
 
    Fields per pipeline: :shader, :cull (:back/:front/:none), :depth-write (bool),
    :depth-compare (:less/:less-equal/…), :blend (:none/:alpha)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def pipelines
   "The open-world render pipelines as pure data."
@@ -53,7 +53,7 @@
 (defn- kw-cull [s] (case s "Back" :back "Front" :front :none))
 (defn- kw-cmp  [s] (case s "Less" :less "LessEqual" :less-equal "Greater" :greater
                            "GreaterEqual" :greater-equal "Equal" :equal "Always" :always
-                           (keyword (str/lower-case s))))
+                           (keyword (str/lower s))))
 
 (defn parse-rust
   "Extract each native pipeline's varying fields from scene_pipelines.rs, keyed by shader.
