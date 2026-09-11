@@ -9,5 +9,5 @@ Includes `parse-rust` for optional drift-gating against legacy native `scene_pip
 ## Test
 
 ```sh
-clojure -M:test
+kbb -M:test
 ```
