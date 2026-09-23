@@ -1,6 +1,6 @@
 (ns pipelines-test
   "Gate the kotoba pipeline table as portable .cljc data."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kotoba.pipelines :as pl]
             [kotoba.pipelines :as old-pl]))
 
